@@ -13,8 +13,19 @@ export const BackgroundAnimation: React.FC = () => {
 
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: 'url("/public/Moorish Archway Serenity.png")',
+        }}
+      />
+      
+      {/* Dark overlay for better text readability */}
+      <div className="absolute inset-0 bg-black/40" />
+      
       {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-blue-900 to-slate-900" />
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-blue-900/40 to-slate-900/60" />
       
       {/* Stars */}
       {stars.map(star => (
